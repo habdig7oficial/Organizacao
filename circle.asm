@@ -1,17 +1,15 @@
 .data
 
 pi: .float 3.14
-v: .word 1
+v: .float 2
 
 
 .text
 
-l.s $f0, pi
+l.s $f2, pi
 l.s $f4, v
 
-mul.s
-#mul.s $f12, $f0, $f4
-l.s $f12, pi
+mul.s $f12, $f2, $f4
 
 li $v0, 2
 syscall
